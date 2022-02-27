@@ -11,7 +11,7 @@ class Init():
       print(" \n" + "         ██████╗ ██████╗  █████╗  ██████╗      ██╗   ██╗████████╗██╗██╗      \n" + "         ██╔══██╗██╔══██╗██╔══██╗██╔════╝      ██║   ██║╚══██╔══╝██║██║      \n" + "         ██║  ██║██║  ██║██║  ██║╚█████╗ █████╗██║   ██║   ██║   ██║██║      \n" + "         ██║  ██║██║  ██║██║  ██║ ╚═══██╗╚════╝██║   ██║   ██║   ██║██║     \n"+  "         ██████╔╝██████╔╝╚█████╔╝██████╔╝      ╚██████╔╝   ██║   ██║███████╗ \n" + "         ╚═════╝ ╚═════╝  ╚════╝ ╚═════╝        ╚═════╝    ╚═╝   ╚═╝╚══════╝ \n" + "\n" + "                        DDOS-UTILITY -- BY SRGWRTG0342\n" + "                              A TESTER UTILITY\n" )
       ip = input("IP : ")
       port = input("PORT : ")
-      numbytes = input("PACKER SIZE(bytes):")
+      numbytes = input("PACKET SIZE(bytes):")
       numbytes = int(numbytes)
       if numbytes != int(numbytes):
         print("Error!")
